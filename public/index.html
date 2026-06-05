@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortunateDispa | Stop Deadheading. Get Booked.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="top-panel">
+    <div class="logo">★ FORTUNATEDISPA</div>
+    <div class="title">
+        Stop Deadheading. Get Booked. Maximize Every Mile.
+    </div>
+</header>
+
+<main class="main">
+
+    <section class="left-panel">
+        <h1>
+            Keep Your Truck <span class="highlight">Loaded</span>, Not Waiting.
+        </h1>
+
+        <p>
+            FortunateDispa helps owner-operators and small fleets find profitable freight, reduce empty miles, and increase weekly revenue. We handle load searching, broker negotiations, and route planning so you can stay focused on driving and earning.
+        </p>
+
+        <div class="features">
+            <div class="feature">🚚 Dedicated Dispatch Support</div>
+            <div class="feature">💰 High-Paying Freight Opportunities</div>
+            <div class="feature">📍 Smart Route Planning</div>
+            <div class="feature">⚡ Minimize Deadhead Miles</div>
+            <div class="feature">📞 Direct Broker Communication</div>
+        </div>
+
+        <div class="stats">
+          
+        </div>
+    </section>
+
+    <section>
+        <form class="form" id="carrierForm">
+            <div class="form-title">Carrier Information</div>
+
+            <div id="message"></div>
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="John Smith" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+
+            <div class="section-title">TRAILER SPECIFICATIONS</div>
+
+            <label for="trailerType">Trailer Type</label>
+            <select id="trailerType" name="trailerType">
+                <option value="">Choose Trailer Type</option>
+                <option value="Dry Van">Dry Van</option>
+                <option value="Reefer">Reefer</option>
+                <option value="Flatbed">Flatbed</option>
+                <option value="Step Deck">Step Deck</option>
+                <option value="Hotshot">Hotshot</option>
+            </select>
+
+            <label for="maxWeight">Maximum Weight Capacity</label>
+            <input type="text" id="maxWeight" name="maxWeight" placeholder="e.g. 45,000 lbs">
+
+            <label for="trailerLength">Trailer Length</label>
+            <select id="trailerLength" name="trailerLength">
+                <option value="">Select Length</option>
+                <option value="48 Feet">48 Feet</option>
+                <option value="53 Feet">53 Feet</option>
+            </select>
+
+            <div class="section-title">ROUTE PREFERENCE</div>
+
+            <div class="row">
+                <div>
+                    <label for="currentCity">Current City</label>
+                    <input type="text" id="currentCity" name="currentCity" placeholder="Dallas">
+                </div>
+                <div>
+                    <label for="currentState">State</label>
+                    <input type="text" id="currentState" name="currentState" placeholder="TX">
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:15px;">
+                <div>
+                    <label for="destinationCity">Preferred Destination City</label>
+                    <input type="text" id="destinationCity" name="destinationCity" placeholder="Atlanta">
+                </div>
+                <div>
+                    <label for="destinationState">State</label>
+                    <input type="text" id="destinationState" name="destinationState" placeholder="GA">
+                </div>
+            </div>
+
+            <label for="weeklyTarget">Minimum Weekly Revenue Goal</label>
+            <input type="text" id="weeklyTarget" name="weeklyTarget" placeholder="$5,000">
+
+            <label for="availableDate">Available Date</label>
+            <input type="date" id="availableDate" name="availableDate">
+
+            <label for="timeWindow">Preferred Time Window</label>
+            <select id="timeWindow" name="timeWindow">
+                <option value="">Select Time</option>
+                <option value="Any Time">Any Time</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+            </select>
+
+            <button type="submit" id="submitBtn" class="submit-btn">
+                FIND MY NEXT LOAD →
+            </button>
+        </form>
+    </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
