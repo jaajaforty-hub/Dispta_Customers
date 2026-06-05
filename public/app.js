@@ -2,7 +2,7 @@ const form = document.getElementById("carrierForm");
 const submitBtn = document.getElementById("submitBtn");
 const message = document.getElementById("message");
 
-const API_URL = "http://localhost:5000/api/carriers";
+const API_URL = "/api/carriers";
 
 if (!form || !submitBtn || !message) {
     console.error("Missing required DOM elements");
