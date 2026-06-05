@@ -84,6 +84,36 @@ app.post("/api/carriers", async (req, res) => {
     }
 });
 
+app.get("/tables", async (req, res) => {
+  try {
+    const result = await pool.query(`
+      CREATE TABLE carriers (
+    id SERIAL PRIMARY KEY,
+    full_name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    phone TEXT,
+    trailer_type TEXT,
+    max_weight INTEGER,
+    trailer_length INTEGER,
+    current_state TEXT,
+    current_city TEXT,
+    destination_state TEXT,
+    destination_city TEXT,
+    weekly_target TEXT,
+    available_date DATE,
+    time_window TEXT,
+    created_at TIMESTAMP DEFAULT NOW()
+ );
+
+      
+    `);
+    console.log(result.rows)
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("DB error");
+  }
+});
+
 
 
 const PORT = process.env.PORT || 5000;
